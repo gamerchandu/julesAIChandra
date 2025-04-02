@@ -1,0 +1,18 @@
+{
+  "name": "julestestchandra",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:desktop:local:chrome": "playwright test --config=conf/desktop.local.chrome.config.js",
+    "test:desktop:local:firefox": "playwright test --config=conf/desktop.local.firefox.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.13.17"
+  }
+}

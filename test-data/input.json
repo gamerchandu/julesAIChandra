@@ -1,0 +1,22 @@
+{
+  "valid":
+  {
+      "username" : "qa@julesai.com",
+      "password" : "QaJULES2023!"
+  },
+  "invalid":
+  {
+     "username" : "qa@julesai.com",
+      "password" : "QaJULES2023"
+  },
+  "empty":
+  {
+      "username" : "",
+      "password" : ""
+  },
+  "incomplete":
+  {
+     "username" : "qa@jule",
+      "password" : "QA12"
+  }
+}
