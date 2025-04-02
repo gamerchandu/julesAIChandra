@@ -65,7 +65,7 @@ test.describe('Login Funtionality', () => {
       await page.screenshot({path: './screenshots/warningsIncompleteLogin.png'});
     });
 
-    test.only('should logout user after successful login', async ({ page }) => {
+    test('should logout user after successful login', async ({ page }) => {
 
    
       await page.locator('[data-test-id="input-email"]').getByRole('textbox').click();
