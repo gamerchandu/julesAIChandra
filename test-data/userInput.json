@@ -1,0 +1,26 @@
+[
+    {
+        "username" : "qa@julesai.com",
+        "password" : "QaJULES2023!",
+        "messageDisplayed" : "Valid Login"
+    },
+ 
+    {
+       "username" : "qa@julesai.com",
+        "password" : "QaJULES2023",
+        "messageDisplayed" : "Invalid Login"
+    },
+ 
+    {
+        "username" : "",
+        "password" : "",
+        "messageDisplayed" : "empty input"
+    },
+ 
+    {
+       "username" : "qa@jule",
+        "password" : "QA12",
+        "messageDisplayed" : "incomplete input"
+    }
+]
+  
