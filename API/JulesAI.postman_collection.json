@@ -160,7 +160,40 @@
 							"pm.test(\"Response content type is application/json\", function () {",
 							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");",
 							"});",
-							" "
+							" ",
+							"",
+							" ",
+							"pm.test(\"Verify data format for selected section\", function () {",
+							"    const responseData = pm.response.json();",
+							"    const selectedData = responseData.data.companies[0];",
+							"",
+							"    pm.expect(selectedData).to.be.an('object');",
+							"    pm.expect(selectedData.typename).to.be.a('string');",
+							"    pm.expect(selectedData.subvalue).to.be.a('string');",
+							"    pm.expect(selectedData.address).to.be.a('string');",
+							"    pm.expect(selectedData.id).to.be.a('number');",
+							"    pm.expect(selectedData.value).to.be.a('string');",
+							"    pm.expect(selectedData.country).to.be.a('string');",
+							"    pm.expect(selectedData.currency).to.be.a('string');",
+							"    pm.expect(selectedData.city).to.be.a('string');",
+							"    pm.expect(selectedData.zipCode).to.be.a('string');",
+							"    pm.expect(selectedData.customAddress).to.be.a('string');",
+							"    pm.expect(selectedData.customAddress2).to.be.null;",
+							"    pm.expect(selectedData.type).to.be.a('string');",
+							"    pm.expect(selectedData.state).to.be.null;",
+							"    pm.expect(selectedData.createdAt).to.be.a('string');",
+							"    pm.expect(selectedData.updatedAt).to.be.a('string');",
+							"    pm.expect(selectedData.providerId).to.be.a('number');",
+							"    pm.expect(selectedData.erpId).to.be.null;",
+							"    pm.expect(selectedData.siteIds).to.be.an('array');",
+							"    pm.expect(selectedData.defaultAdminId).to.be.a('number');",
+							"    pm.expect(selectedData.defaultUserId).to.be.a('number');",
+							"    pm.expect(selectedData.paymentTerms).to.be.a('string');",
+							"    pm.expect(selectedData.defaultConsigneeDetails).to.be.null;",
+							"    pm.expect(selectedData.defaultNotifyDetails).to.be.null;",
+							"    pm.expect(selectedData.defaultDocs).to.be.null;",
+							"});",
+							""
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -183,7 +216,7 @@
 					},
 					{
 						"key": "authorization",
-						"value": "Bearer {{tokenSaved}}"
+						"value": "{{tokenSaved}}"
 					},
 					{
 						"key": "client-name",
@@ -249,10 +282,12 @@
 					}
 				],
 				"body": {
-					"mode": "graphql",
-					"graphql": {
-						"query": "query Contacts {\n  contacts {\n    firstName\n    phoneNumber\n  }\n}",
-						"variables": ""
+					"mode": "raw",
+					"raw": "{\"operationName\":\"companies\",\"variables\":{},\"extensions\":{\"persistedQuery\":{\"version\":1,\"sha256Hash\":\"ae3f6ff28c21f5fa42c80503396e1fef6fa37dd1104f4f81830115dc7babfb8b\"}},\"query\":\"query companies {\\n  companies\\n}\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
 					}
 				},
 				"url": {

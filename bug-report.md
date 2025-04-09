@@ -24,3 +24,15 @@ Screenshot/ Video:
 Severity: Low
 Impact Analysis: ToDo
 
+## 3. Bug Title: Purchases - Extract button not working
+Steps to Reproduce: 
+    Login into https://demo.haroldwaste.com/
+    On the purchases homepage
+    Click on extract button
+    Select either xlsx/csv format
+    Click on Download
+Actual Result: Notification says 'Please wait, we are preparing your extract'. Even after waiting there is no download
+Expected result: File records should be downloaded
+Screenshot/ Video: 
+Severity: High
+Impact Analysis: ToDo
