@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import  TEST_DATA  from '../test-data/userinput.json';
+import  TEST_DATA  from '../test-data/userInput.json';
 
 
 for(const userInput of TEST_DATA) {
