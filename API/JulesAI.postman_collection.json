@@ -146,7 +146,133 @@
 			"response": []
 		},
 		{
-			"name": "GetContacts",
+			"name": "LoginBadRequest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"Response content type is application/json\", function () {",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");",
+							"});",
+							"",
+							"// Verify the format of the response error message",
+							"pm.test(\"Response error message format is as expected\", function () {",
+							"    const response = pm.response.json(); ",
+							"    pm.expect(response.errors[0].message).to.equal(\"Unknown operation named \\\"loin\\\".\");",
+							"    pm.expect(response.errors[0].extensions.code).to.equal(\"OPERATION_RESOLUTION_FAILURE\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-GB,en-US;q=0.9,en;q=0.8"
+					},
+					{
+						"key": "authorization",
+						"value": ""
+					},
+					{
+						"key": "client-name",
+						"value": "web"
+					},
+					{
+						"key": "client-tz",
+						"value": "Asia/Calcutta"
+					},
+					{
+						"key": "client-version",
+						"value": "1.0.7"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "origin",
+						"value": "https://demo.haroldwaste.com"
+					},
+					{
+						"key": "priority",
+						"value": "u=1, i"
+					},
+					{
+						"key": "referer",
+						"value": "https://demo.haroldwaste.com/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Google Chrome\";v=\"135\", \"Not-A.Brand\";v=\"8\", \"Chromium\";v=\"135\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-site"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"operationName\": \"loin\",\n    \"variables\": {\n        \"email\": \"qa@julesai.com\",\n        \"password\": \"QaJULES2023!\"\n    },\n    \"extensions\": {\n        \"persistedQuery\": {\n            \"version\": 1,\n            \"sha256Hash\": \"ab50d832c7fe27534f4a42b330d919766ad8406649899c4ee8a50a19ae103470\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://demo.api.haroldwaste.com/graphql",
+					"protocol": "https",
+					"host": [
+						"demo",
+						"api",
+						"haroldwaste",
+						"com"
+					],
+					"path": [
+						"graphql"
+					]
+				},
+				"description": "Generated from cURL: curl 'https://demo.api.haroldwaste.com/graphql' \\\n  -H 'accept: */*' \\\n  -H 'accept-language: en-GB,en-US;q=0.9,en;q=0.8' \\\n  -H 'authorization;' \\\n  -H 'client-name: web' \\\n  -H 'client-tz: Asia/Calcutta' \\\n  -H 'client-version: 1.0.7' \\\n  -H 'content-type: application/json' \\\n  -H 'origin: https://demo.haroldwaste.com' \\\n  -H 'priority: u=1, i' \\\n  -H 'referer: https://demo.haroldwaste.com/' \\\n  -H 'sec-ch-ua: \"Google Chrome\";v=\"135\", \"Not-A.Brand\";v=\"8\", \"Chromium\";v=\"135\"' \\\n  -H 'sec-ch-ua-mobile: ?0' \\\n  -H 'sec-ch-ua-platform: \"macOS\"' \\\n  -H 'sec-fetch-dest: empty' \\\n  -H 'sec-fetch-mode: cors' \\\n  -H 'sec-fetch-site: same-site' \\\n  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36' \\\n  --data-raw $'{\"operationName\":\"login\",\"variables\":{\"email\":\"qa@julesai.com\",\"password\":\"QaJULES2023\\u0021\"},\"extensions\":{\"persistedQuery\":{\"version\":1,\"sha256Hash\":\"ab50d832c7fe27534f4a42b330d919766ad8406649899c4ee8a50a19ae103470\"}}}'"
+			},
+			"response": []
+		},
+		{
+			"name": "GetCompanies",
 			"event": [
 				{
 					"listen": "test",
