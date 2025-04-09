@@ -10,6 +10,7 @@ Total load doesn't match the sum of Allocated, PLanned, Booked & Loaded
 ##### Screenshot/ Video: 
 ![alt text](bugs/image.png)
 ##### Severity: Critical
+##### Priority: Highest
 ##### Impact Analysis: ToDo
 
 
@@ -26,6 +27,7 @@ Warning message says ' Your email and/or password are incorrects' . Here incorre
 ##### Screenshot/ Video: 
 ![alt text](bugs/ECA6787E-3419-42A8-83F1-ACFC85DE409F.png)
 ##### Severity: Low
+##### Priority: Lowest
 ##### Impact Analysis: ToDo
 
 ## 3. Bug Title: Purchases - Extract button not working
@@ -41,4 +43,5 @@ Notification says 'Please wait, we are preparing your extract'. Even after waiti
  File records should be downloaded
 ##### Screenshot/ Video: 
 ##### Severity: High
+##### Priority: Highest
 ##### Impact Analysis: ToDo
