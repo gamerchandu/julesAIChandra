@@ -6,7 +6,7 @@ Steps to Reproduce:
 Actual Result: Total load doesn't match the sum of Allocated, PLanned, Booked & Loaded
 Expected result: Total should be sum of Allocated, PLanned, Booked & Loaded
 Screenshot/ Video: 
-![alt text](image.png)
+![alt text](bugs/image.png)
 Severity: Critical
 Impact Analysis: ToDo
 
@@ -20,6 +20,7 @@ Steps to Reproduce:
 Actual Result: Warning message says ' Your email and/or password are incorrects' . Here incorrects shouldn't have 's'
 Expected result:  Warning message should say ' Your email and/or password are incorrect' 
 Screenshot/ Video: 
-![alt text](ECA6787E-3419-42A8-83F1-ACFC85DE409F.png)
+![alt text](bugs/ECA6787E-3419-42A8-83F1-ACFC85DE409F.png)
 Severity: Low
 Impact Analysis: ToDo
+
