@@ -7,9 +7,13 @@ export default defineConfig({
     use : {
         ...baseConfig.use,
         browserName: 'chromium',
-        viewport: { width: 1280, height: 720 },
+        //viewport: { width: 1536, height: 1200 },
         headless: false,
-        channel: 'chrome', 
+        launchOptions: {
+            args: ['--window-size=1920,1040'],
+          }
+        
+
 
     },
 });
